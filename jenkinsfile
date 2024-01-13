@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Git') {
+            steps {
+             git 'https://github.com/Ashish11234/kgf.git'
+            }
+        }
+        stage("java"){
+            steps{
+                sh 'java Hello.java'
+            }
+        }
+    }
+}
